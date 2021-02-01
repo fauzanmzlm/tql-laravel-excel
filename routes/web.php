@@ -17,4 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/users/export', 'UsersExportController@export');
+
+Route::get('/users/import', 'UsersImportController@show');
+Route::post('/users/import', 'UsersImportController@store');

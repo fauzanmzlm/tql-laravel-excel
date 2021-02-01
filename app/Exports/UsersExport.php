@@ -72,7 +72,7 @@ class UsersExport implements
             /* BeforeExport::class => function(BeforeExport $event) {
                 $event->writer->getProperties()->setCreator('Patrick');
             }, */
-            AfterSheet::class => function (AfterSheet $event) {
+            AfterSheet::class => function (AfterSheet $event) { 
                 $event->sheet->getStyle('A8:D8')->applyFromArray([
                     'font' => [
                         'bold' => true

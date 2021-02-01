@@ -2,7 +2,6 @@
 
 namespace App\Exports;
 
-use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithMultipleSheets;
 
 class UserMultiSheetExport implements WithMultipleSheets
@@ -18,7 +17,7 @@ class UserMultiSheetExport implements WithMultipleSheets
     {
         $sheets = [];
 
-        for($month = 1; $month<=12; $month++){
+        for ($month = 1; $month <= 12; $month++) {
             $sheets[] = new UsersExport($this->year, $month);
         }
 
